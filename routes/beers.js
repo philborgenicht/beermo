@@ -3,7 +3,7 @@ var router = express.Router();
 var knex = require('../knex')
 
 /* GET users listing. */
-<<<<<<< HEAD
+
 router.get('/', (req, res, next) => {
   knex('beers')
 //.select('beer_name', 'favor_value')
@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
   res.send(beers)
 })
 })
-=======
+
 router.get('/', function(req, res, next) {
   knex('beers')
   .then(data=>{
@@ -40,6 +40,6 @@ router.post('/', function(req, res, next){
 
 
 
->>>>>>> 6646a354de26af310ca124fe07bde8328660af07
+
 
 module.exports = router;
