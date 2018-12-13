@@ -20,8 +20,25 @@ html{
   background-color: #000080;
 }
 
+.card{
+  color: black;
+  background-color: orange;
+}
+#modal1{
+  color: black;
+  background-color: orange;
+}
+
 .bacon{
   background-color: #e88e15
+}
+
+form{
+  font-size:2vw
+}
+
+.submit-form{
+  text-align: center;
 }
 
 body{
