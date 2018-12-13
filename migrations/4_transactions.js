@@ -17,6 +17,8 @@ exports.up = function(knex) {
     table.string('beer_id').unsigned()
     table.foreign('beer_id').references('beers.beer_name')
 
+    table.timestamps(true, true)
+
   })
 }
 
