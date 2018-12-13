@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   .then(data=>{
     res.send(data)
   })
-});
+})
 
 router.get('/:id', function(req,res,next){
   let id=req.params.id
@@ -35,6 +35,7 @@ router.patch('/:id', function(req, res, next){
   .then(data=>{
     res.send(data)
   })
+})
 
 router.delete('/:id', function(req, res, next){
   knex('users')
@@ -47,7 +48,6 @@ router.delete('/:id', function(req, res, next){
 
 })
 
-})
 
-router.delete('/')
+
 module.exports = router;

@@ -6091,8 +6091,8 @@ button:focus {
 }
 
 label {
-  font-size: 0.8rem;
-  color: #9e9e9e;
+  font-size: 2vw;
+  color: #000000;
 }
 
 /* Text Inputs + Textarea
@@ -6127,7 +6127,7 @@ input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #000000;
   border-radius: 0;
   outline: none;
   height: 3rem;
