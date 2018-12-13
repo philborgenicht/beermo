@@ -1,10 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var knex = require('knex')
+var knex = require('../knex')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
+
+router.get('/transactions/:id', function(req, res, next){
+  knex('transactions')
+  .join('users', 'transactions.recipient_id', 'users.id' )
+  .then(data=>{
+    res.send(data)
+  })
+})
+
 
 module.exports = router;
