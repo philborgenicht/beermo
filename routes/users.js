@@ -53,7 +53,7 @@ router.post('/:id', function(req,res,next){
         return next({ status: 400, message: 'Bad email or password' })
       }
       const claim = { userId: user.id }
-      const token = jwt.sign(claim, process.env.JWT_KEY, {
+      const token = jwt.sign(claim, user.hashed_Password, {
         expiresIn: '7 days'  // Adds an exp field to the payload
       })
 
@@ -63,7 +63,7 @@ router.post('/:id', function(req,res,next){
         secure: router.get('env') === 'production'  // Set from the NODE_ENV
       })
 
-      delete user.hashedPassword
+      delete user.hashed_Password
       res.send(user)
     })
 
