@@ -1,26 +1,28 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 const button=document.getElementById("recap")
-let appendage=document.getElementById("acctinfo")
-let acctnum=document.getElementById("acctnum")
 
 
 
-button.addEventListener('click', function(){
-  getMyAccount(userid)
-  .then(results=>{
-    let fname=document.createElement('li')
-    let lname=document.createElement('li')
-    let email=document.createElement('li')
-    fname.innerText=results[userid]["first_name"]
-    lname.innerText=results[userid]["last_name"]
-    email.innerText=results[userid]["email"]
-    appendage.appendChild(fname)
-    appendage.appendChild(lname)
-    appendage.appendChild(email)
-  })
-
+button.addEventListener('click', function(event){
+  let appendage=document.getElementById("acctinfo")
+  let acctnum=document.getElementById("acctnum")
+  let newp=document.createElement('p')
+  newp.innerText="helloworld"
+appendage.appendChild(newp)
 })
+})
+  // getMyAccount()
+  // .then( results => {
+  //   console.log("will sucks")
+  //   console.log(results)
+  //   for (var i = 0; i < results.data.length; i++) {
+  //     let li = document.createElement('li')
+  //     li.innerText = `${results.data[i].name}, ${results.data[i].isNice}`
+  //     appendage.appendChild(li)
+  //   }
+  // })
+
 
 
 
