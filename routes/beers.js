@@ -11,10 +11,11 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/:id', function(req, res, next){
+  let favorValue=req.body.favor
   knex('beers')
-  .where('id', req.params.id)
+  .where('favor_value', favorValue)
   .then(data=>{
-    res.send(data[0])
+    res.send(data)
   })
 })
 
