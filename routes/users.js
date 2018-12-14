@@ -18,7 +18,7 @@ router.get('/:id', function(req,res,next){
   knex('users')
   .where('id',id)
   .then(data=>{
-    res.send(data[0])
+    res.send(data)
   })
 })
 
