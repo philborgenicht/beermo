@@ -1,6 +1,9 @@
-var express = require('express');
-var router = express.Router();
-var knex = require('../knex')
+let express = require('express');
+let router = express.Router();
+let knex = require('../knex')
+let bcrypt = require('bcryptjs')
+let salt = bcrypt.genSaltSync(10)
+
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -20,9 +23,14 @@ router.get('/:id', function(req,res,next){
 })
 
 router.post('/', function(req,res,next){
+  let passWord = req.body.hashed_password
+  let hash = bcrypt.hashSync(passWord, 8);
+  let body = req.body
+  body[ 'hashed_password' ] = hash;
+
   knex('users')
   .insert(req.body)
-  .returning('*')
+  .returning(['first_name','last_name','email'])
   .then(data=>{
     res.send(data)
   })
