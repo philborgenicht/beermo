@@ -6,6 +6,18 @@
  * Made By MaterializeCSS.com
  */
 
+.accountrecap{
+  padding-left: 200px
+}
+
+.results{
+  align-content: center;
+}
+
+.aboutus, li{
+  font-size: 18px
+}
+
 html{
   font-family: 'Kalam', cursive;
 }
