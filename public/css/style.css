@@ -6,6 +6,23 @@
  * Made By MaterializeCSS.com
  */
 
+
+.phil{
+  font-size: 35px;
+}
+
+th{
+  font-size:35px;
+}
+
+td{
+font-size: 30px;
+}
+
+table{
+  border-width: 15px;
+}
+
 .accountrecap{
   padding-left: 200px
 }
