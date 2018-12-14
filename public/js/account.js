@@ -2,16 +2,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 const appendage=document.getElementById('acctinfo')
-let form=document.getElementById('form')
 
 
 
-  getMyAccount(id)
+
+  getMyAccount(6)
   .then( results => {
     console.log(results.data)
     for (var i = 0; i < results.data.length; i++) {
       let li = document.createElement('li')
-      li.setAttribute('class', results)
+
       li.innerText =
       `Transaction Id: ${results.data[i].id},
 
