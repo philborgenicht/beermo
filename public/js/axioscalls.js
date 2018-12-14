@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function getAllUsers(){
   return axios.get('/users')
 }
@@ -18,4 +19,9 @@ function getOneUser(userId){
 //update user
 function updateUser(user){
   return axios.patch(`/users/${user.id}`, user)
+
+//get one user
+function getMyAccount(id){
+  return axios.get(`transactions/${id}`)
+
 }

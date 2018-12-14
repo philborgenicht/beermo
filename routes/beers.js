@@ -3,6 +3,15 @@ var router = express.Router();
 var knex = require('../knex')
 
 /* GET users listing. */
+
+router.get('/', (req, res, next) => {
+  knex('beers')
+//.select('beer_name', 'favor_value')
+.then((beers) => {
+  res.send(beers)
+})
+})
+
 router.get('/', function(req, res, next) {
   knex('beers')
   .then(data=>{
@@ -11,10 +20,11 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/:id', function(req, res, next){
+  let favorValue=req.body.favor
   knex('beers')
-  .where('id', req.params.id)
+  .where('favor_value', favorValue)
   .then(data=>{
-    res.send(data[0])
+    res.send(data)
   })
 })
 
@@ -26,6 +36,7 @@ router.post('/', function(req, res, next){
     res.send(data)
   })
 })
+
 
 
 

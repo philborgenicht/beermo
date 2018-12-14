@@ -13,6 +13,7 @@ router.get('/', function(req, res, next) {
 router.get('/:id', function(req,res,next){
   let id=req.params.id
   knex('users')
+  .where('id',id)
   .then(data=>{
     res.send(data[0])
   })
