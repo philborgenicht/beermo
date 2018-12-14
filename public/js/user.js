@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const userdata=document.getElementById('userdata')
   const favorite=document.getElementById('favorite')
 
-    getMyInfo(6)
+    getMyInfo(id)
     .then( results => {
       console.log(results.data)
       for (var i = 0; i < results.data.length; i++) {
@@ -19,23 +19,21 @@ document.addEventListener("DOMContentLoaded", function(){
         Email Address: ${results.data[i].email}
 
         `
-
         userdata.appendChild(li)
       }
     })
 
-    getMyFavoriteBeer(6)
+    getMyFavoriteBeer(id)
     .then( results => {
       console.log(results.data)
       for (var i = 0; i < results.data.length; i++) {
-        let newp = document.createElement('p')
+        let li = document.createElement('li')
 
-        newp.innerText =
-        `My Favorite Beer: ${results.data.beer_id}
+        li.innerText =
+        `My Favorite Beer: ${results.data[i].beer_id}
 
         `
-
-        favorite.appendChild(newp)
+        favorite.appendChild(li)
       }
     })
 

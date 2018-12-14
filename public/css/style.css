@@ -5,6 +5,9 @@
  *
  * Made By MaterializeCSS.com
  */
+.acctinfo{
+  font-size: 25px
+}
 
 
 .phil{
@@ -24,7 +27,8 @@ table{
 }
 
 .accountrecap{
-  padding-left: 200px
+  padding-left: 350px;
+  font-size: 25px
 }
 
 .results{
@@ -32,7 +36,7 @@ table{
 }
 
 .aboutus, li{
-  font-size: 18px
+  font-size: 25px
 }
 
 html{

@@ -23,16 +23,21 @@ router.get('/:id', function(req,res,next){
 })
 
 router.post('/', function(req,res,next){
+  console.log(req.body)
   let passWord = req.body.hashed_password
-  let hash = bcrypt.hashSync(passWord, 8);
+
+  let hash = bcrypt.hashSync(passWord, 8)
   let body = req.body
   body[ 'hashed_password' ] = hash;
-
+console.log(body)
   knex('users')
   .insert(req.body)
   .returning(['first_name','last_name','email'])
   .then(data=>{
     res.send(data)
+  })
+  .catch(err=>{
+    console.log(err)
   })
 })
 
