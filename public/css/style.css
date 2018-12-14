@@ -5,6 +5,9 @@
  *
  * Made By MaterializeCSS.com
  */
+.aboutus, li{
+  font-size: 18px
+}
 
 html{
   font-family: 'Kalam', cursive;
