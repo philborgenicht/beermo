@@ -1,6 +1,9 @@
-var express = require('express');
-var router = express.Router();
-var knex = require('../knex')
+let express = require('express');
+let router = express.Router();
+let knex = require('../knex')
+let bcrypt = require('bcrypt')
+let salt = bcrypt.genSaltSync(10)
+
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
