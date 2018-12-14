@@ -11,6 +11,7 @@ router.get('/:id', (req, res, next)=> {
     .innerJoin('users as u2','transactions.user_sender_id','u2.id')
     .innerJoin('users as u1','transactions.recipient_id','u1.id')
     .then(result=>{
+
       res.send(result)
     })
 });
