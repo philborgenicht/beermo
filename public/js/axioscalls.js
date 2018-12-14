@@ -1,4 +1,4 @@
 //get one user
-function getMyAccount(){
-  return axios.get('/transactions/:id')
+function getMyAccount(id){
+  return axios.get(`transactions/${id}`)
 }
