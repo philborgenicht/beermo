@@ -15,7 +15,7 @@ router.get('/:id', function(req,res,next){
   knex('users')
   .where('id',id)
   .then(data=>{
-    res.send(data[0])
+    res.send(data)
   })
 })
 
@@ -25,6 +25,9 @@ router.post('/', function(req,res,next){
   .returning(['first_name','last_name','email'])
   .then(data=>{
     res.send(data)
+  })
+  .catch(err=>{
+    console.log(err)
   })
 })
 
