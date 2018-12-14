@@ -6,7 +6,7 @@ const appendage=document.getElementById('acctinfo')
 
 
 
-  getMyAccount(6)
+  getMyAccount(id)
   .then( results => {
     console.log(results.data)
     for (var i = 0; i < results.data.length; i++) {
