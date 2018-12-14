@@ -6,12 +6,6 @@ let bcrypt = require('bcryptjs')
 
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  knex('users')
-  .then(data=>{
-    res.send(data)
-  })
-})
 
 router.get('/:id', function(req,res,next){
   let id = req.params.id
@@ -82,6 +76,11 @@ router.post('/', function(req,res,next){
     .catch((err) => {
       next(err)
     })
+})
+
+router.delete('/token', (req, res) => {
+  res.clearCookie('token')
+  res.end()
 })
 
 module.exports = router;
