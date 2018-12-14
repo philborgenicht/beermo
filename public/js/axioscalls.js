@@ -11,3 +11,7 @@ function getMyInfo(id){
 function getMyFavoriteBeer(id){
   return axios.get(`favorites/${id}`)
 }
+
+function createNewUser(user){
+  return axios.post('/users', user)
+}
