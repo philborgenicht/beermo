@@ -5,9 +5,16 @@
  *
  * Made By MaterializeCSS.com
  */
+.acctinfo{
+  font-size: 25px
+}
 
+td{
+  
+}
 .accountrecap{
-  padding-left: 200px
+  padding-left: 350px;
+  font-size: 25px
 }
 
 .results{
@@ -15,7 +22,7 @@
 }
 
 .aboutus, li{
-  font-size: 18px
+  font-size: 25px
 }
 
 html{
