@@ -6,15 +6,15 @@ document.addEventListener("DOMContentLoaded", function(){
     event.preventDefault()
 
     let password = document.getElementById("password-input").value
-    let email = document.getElementById("email").value
+    let email = document.getElementById("email-input").value
 
     let user ={}
     user.email = email
     user.password = password
     login(user)
       .then(data=>{
-        
+
       })
-  }
+  })
 
   })

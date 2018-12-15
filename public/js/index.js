@@ -12,22 +12,12 @@ document.addEventListener("DOMContentLoaded", function(){
     user.first_name = fname
     user.last_name = lname
     user.email = email
-    user.hashed_password = password
+    user.password = password
 
     createNewUser(user)
       .then(result=>{
-        
+
       })
   })
-
-
-
-
-
-
-
-
-
-
 
 })
