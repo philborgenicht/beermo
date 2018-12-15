@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
   const userdata=document.getElementById('userdata')
   const favorite=document.getElementById('favorite')
+  const deleteButton=document.getElementById("deleteme")
+  // const form=document.getElementById('form')
+  // const usernumber=document.getElementById('usernumber')
+  //
+  // form.addEventListener('submit', function(){
+  //   let id=Number.parseInt(usernumber.value)
 
     getMyInfo(id)
     .then( results => {
@@ -36,6 +42,14 @@ document.addEventListener("DOMContentLoaded", function(){
         favorite.appendChild(li)
       }
     })
+
+// })
+    // deleteButton.addEventListener('click', function(){
+    //   deleteUser(id)
+    //   .then(data=>{
+    //     console.log(data)
+    //   })
+    // })
 
 
 
