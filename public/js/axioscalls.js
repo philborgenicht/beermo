@@ -13,7 +13,7 @@ function getMyFavoriteBeer(id){
 }
 
 function createNewUser(user){
-  return axios.post('/users', user)
+  return axios.post('/signup', user)
 }
 
 function populateFavorTable(){
@@ -22,4 +22,8 @@ function populateFavorTable(){
 
 function deleteUser(id){
   return axios.delete(`users/${id}`)
+}
+
+function login(user){
+  return axios.post(`token/`, user)
 }
