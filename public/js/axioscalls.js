@@ -19,3 +19,7 @@ function createNewUser(user){
 function populateFavorTable(){
   return axios.get('/favors')
 }
+
+function deleteUser(id){
+  return axios.delete(`users/${id}`)
+}

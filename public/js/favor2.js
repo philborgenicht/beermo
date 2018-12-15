@@ -1,17 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 
-let row1=document.getElementById('row1')
-let row2=document.getElementById('row2')
-let row3=document.getElementById('row3')
-let row4=document.getElementById('row4')
-let row5=document.getElementById('row5')
-let row6=document.getElementById('row6')
-let row7=document.getElementById('row7')
-let row8=document.getElementById('row8')
-
-let tableRows=document.getElementsByClassName('tableRows')
-
 let tableBody=document.getElementById('tableBody')
 
 populateFavorTable()
