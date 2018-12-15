@@ -15,3 +15,7 @@ function getMyFavoriteBeer(id){
 function createNewUser(user){
   return axios.post('/users', user)
 }
+
+function populateFavorTable(){
+  return axios.get('/favors')
+}

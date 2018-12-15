@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
     user.email = email
     user.hashed_password = password
 
-console.log(fname)
+console.log(email)
 
 
     createNewUser(user)
