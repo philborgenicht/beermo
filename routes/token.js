@@ -63,10 +63,11 @@ router.post('/', function(req,res,next){
       const claim = { userId: user.id }
 
       const token = jwt.sign(claim, user.hashed_password)
-      console.log(token)
 
       res.cookie('token', token, {
-        httpOnly: true
+        httpOnly: true,
+        expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7),  // 7 days
+        secure: router.get('env') === 'production'  // Set from the NODE_ENV
       })
       delete user.hashed_password
       res.send(user)
