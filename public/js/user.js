@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function(){
   const userdata=document.getElementById('userdata')
   const favorite=document.getElementById('favorite')
   const deleteButton=document.getElementById("deleteme")
-  // const form=document.getElementById('form')
-  // const usernumber=document.getElementById('usernumber')
-  //
-  // form.addEventListener('submit', function(){
-  //   let id=Number.parseInt(usernumber.value)
+  const form=document.getElementById('form')
+  const usernumber=document.getElementById('usernumber')
 
-    getMyInfo(id)
+  // form.addEventListener('submit', function(event){
+  //   let userid=event.target.id.value
+
+    getMyInfo(3)
     .then( results => {
       console.log(results.data)
       for (var i = 0; i < results.data.length; i++) {
