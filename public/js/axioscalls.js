@@ -15,3 +15,7 @@ function getMyFavoriteBeer(id){
 function createNewUser(user){
   return axios.post('/users', user)
 }
+
+function login(user){
+  return axios.get(`token/${user.email}`, user)
+}

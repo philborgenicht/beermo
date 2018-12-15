@@ -8,7 +8,6 @@ let bcrypt = require('bcryptjs')
 /* GET users listing. */
 
 router.get('/:id', function(req,res,next){
-  let id = req.params.id
   let user
 
   knex('users')

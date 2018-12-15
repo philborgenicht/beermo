@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   form.addEventListener('submit', function(event){
-    event.preventDefault()
     let fname=document.getElementById('first_name-input').value
     let lname=document.getElementById('last_name-input').value
     let email=document.getElementById('email-input').value
@@ -15,14 +14,10 @@ document.addEventListener("DOMContentLoaded", function(){
     user.email = email
     user.hashed_password = password
 
-console.log(fname)
-
-
     createNewUser(user)
-    .then(results => {
-
-      console.log(results.data)
-    })
+      .then(result=>{
+        
+      })
   })
 
 
