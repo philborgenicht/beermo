@@ -13,7 +13,7 @@ router.get('/:id', function(req, res, next) {
   knex('favorite_beers')
   .where('id', req.params.id)
   .then(data=>{
-    res.send(data[0])
+    res.send(data)
   })
 })
 

@@ -37,13 +37,16 @@ router.patch('/:id', function(req, res, next){
   })
 })
 
+
+
+//<cannot delete foreign key from other table>
 // router.delete('/:id', function(req, res, next){
 //   knex('favors')
 //   .where('id', req.params.id)
 //   .returning('*')
 //   .del()
 //   .then(data=>{
-//     res.send(data)
+//     res.sendStatus(200).send(data[0])
 //   })
 //
 // })

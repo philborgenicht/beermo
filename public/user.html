@@ -21,12 +21,13 @@
 <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet"></head>
 <body>
   <nav class="william" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+
+    <div class="nav-wrapper container"><img class="navlogo" src="beermologo.png"><a id="logo-container" href="#" class="brand-logo">User Information</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="account.html">Account Info</a></li>
         <li><a href="user.html">User Info</a></li>
-        <li><a href="favor.html">Favors Board</a></li>
+        <li><a href="favor2.html">Favor Listing</a></li>
         <li><a href="index.html">Home Page</a></li>
       </ul>
 
@@ -44,21 +45,25 @@
     <div class="container">
       <br><br>
 
-<div class="col l6">
+
       <h1 class="header center orange-text">All About You</h1>
 
 
-      <h6>My Information</h6>
+      <h2>My Information</h2>
+      <!-- <form id="form">
+      <input id="usernumber" type="text">
+      <button id = "submit" type="submit">get my info</button>
+    </form> -->
 
       <ul id="userdata">
       </ul>
+
+<br>
+<ul id="favorite"></ul>
+
+<button id="deleteme">delete account</button>
+
 </div>
-<div class="col l6">
-  <h6 class="favorite"></h6>
-</div>
-
-
-
 
 
 
@@ -66,8 +71,9 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="black-text">Company Bio</h5>
-          <p class="black-text">We are a team of aspiring software engineers and web developers studying at Galvanize Boulder.
+          <h4 class="black-text">Company Bio</h4>
+          <br><br>
+          <p id="companyBio" class="black-text">We are a team of aspiring software engineers and web developers studying at Galvanize Boulder.
           We like beers and favors and you should too. Thanks for visiting our site; we appreciate your patronage</p>
 
 
@@ -77,8 +83,9 @@
         </div>
         <div class="col l3 s12">
           <h5 class="black-text">Connect</h5>
+          <br><br>
           <ul>
-            <li><a class="black-text" href="https://bootstrapbrewing.com/">Bootstrap Brewing...NOT the CSS Framework</a></li>
+            <li><a class="black-text" href="https://bootstrapbrewing.com/">Bootstrap Brewing...<span class="parentheses"><br>(NOT the CSS Framework)<span></a></li>
             <li><a class="black-text" href="https://galvanize.com">Where We Study</a></li>
             <li><a class="black-text" href="https://www.cobrewdenver.com/">Make Your Own Beer</a></li>
             <li><a class="black-text" href="https://www.boulderfermentationsupply.com/">Make Your Own Wine</a></li>

@@ -5,9 +5,45 @@
  *
  * Made By MaterializeCSS.com
  */
+.navlogo{
+  max-width:50px;
+  background-color: #000080
+}
+.parentheses{
+  font-size: 10px
+}
+
+#companyBio{
+  line-height: 30px
+}
+
+a{
+  font-size: 22px;
+}
+.acctinfo{
+  font-size: 25px
+}
+
+
+.phil{
+  font-size: 35px;
+}
+
+th{
+  font-size:35px;
+}
+
+td{
+font-size: 30px;
+}
+
+table{
+  border-width: 15px;
+}
 
 .accountrecap{
-  padding-left: 200px
+  padding-left: 350px;
+  font-size: 25px
 }
 
 .results{
@@ -15,7 +51,7 @@
 }
 
 .aboutus, li{
-  font-size: 18px
+  font-size: 25px
 }
 
 html{
