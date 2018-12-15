@@ -5,6 +5,21 @@
  *
  * Made By MaterializeCSS.com
  */
+.navlogo{
+  max-width:50px;
+  background-color: #000080
+}
+.parentheses{
+  font-size: 10px
+}
+
+#companyBio{
+  line-height: 30px
+}
+
+a{
+  font-size: 22px;
+}
 .acctinfo{
   font-size: 25px
 }

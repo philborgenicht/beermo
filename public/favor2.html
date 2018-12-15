@@ -6,7 +6,7 @@
   <title>Favors Board</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icon" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icon" rel="stylesheet"> -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" charset="utf-8"></script>
@@ -15,18 +15,18 @@
   <script src="js/axioscalls.js" type="text/javascript">
 
   </script>
-  <script src="js/favor.js" type="text/javascript">
+  <script src="js/favor2.js" type="text/javascript">
 
   </script>
 <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet"></head>
 <body>
   <nav class="william" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Favors</a>
+    <div class="nav-wrapper container"><img class="navlogo" src="beermologo.png"><a id="logo-container" href="#" class="brand-logo">Favors</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="account.html">Account Info</a></li>
         <li><a href="user.html">User Info</a></li>
-        <li><a href="favor.html">Favors Board</a></li>
+        <li><a href="favor2.html">Favor Listing</a></li>
         <li><a href="index.html">Home Page</a></li>
       </ul>
 
@@ -45,10 +45,9 @@
       <br><br>
       <h1 class="header center orange-text">Favors for Beers!</h1>
       <div class="row center">
-        <h5 class="header col s12 light phil">Your Favor List</h5>
+        <h2 class="col s12 light phil">Favors Board</h2>
       </div>
 
-      <br><br>
 
     </div>
   </div>
@@ -62,33 +61,15 @@
       <table class='centered striped'>
        <thead>
          <tr>
-             <th>Name</th>
-             <th>Favor Name</th>
-             <th>Favor Value</th>
+           <th>
+             Current Favor Listings
+             </th>
+
          </tr>
        </thead>
 
-       <tbody>
-         <tr>
-           <td>Mark</td>
-           <td>Moving Furniture</td>
-           <td>3</td>
-         </tr>
-         <tr>
-           <td>Phil</td>
-           <td>Bail Out Of Jail </td>
-           <td>1</td>
-         </tr>
-         <tr>
-           <td>Ben</td>
-           <td>Watched Doggo</td>
-           <td>3</td>
-         </tr>
-         <tr>
-           <td>Will</td>
-           <td>Did Laundry</td>
-           <td>2</td>
-         </tr>
+       <tbody id="tableBody">
+
        </tbody>
      </table>
 

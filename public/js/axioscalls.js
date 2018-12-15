@@ -16,6 +16,13 @@ function createNewUser(user){
   return axios.post('/users', user)
 }
 
+function populateFavorTable(){
+  return axios.get('/favors')
+}
+
+function deleteUser(id){
+  return axios.delete(`users/${id}`)
+}
+
 function login(user){
   return axios.get(`token/${user.email}`, user)
-}
