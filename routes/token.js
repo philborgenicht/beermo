@@ -7,9 +7,14 @@ let bcrypt = require('bcryptjs')
 
 /* GET users listing. */
 
-router.get('/:id', function(req,res,next){
-
+router.get('/', (req,res,next)=>{
   let user
+  let token=req.cookies.token
+
+  let base64Url = token.split('.')[1];
+  let base64 = base64Url.replace('-', '+').replace('_', '/');
+  let parsed = JSON.parse(window.atob(base64));
+  let id = parsed.id
 
   knex('users')
   .where('id',id)
@@ -24,7 +29,6 @@ router.get('/:id', function(req,res,next){
       if (err) {
         return res.send(false)
       }
-
       res.send(true)
     })
   })

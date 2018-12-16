@@ -27,3 +27,7 @@ function deleteUser(id){
 function login(user){
   return axios.post(`token/`, user)
 }
+
+function verifyUser(){
+  return axios.get('token/')
+}
