@@ -3,20 +3,31 @@ let router = express.Router();
 let knex = require('../knex')
 const jwt = require('jsonwebtoken')
 let bcrypt = require('bcryptjs')
+let atob = require('atob')
 
 
 /* GET users listing. */
 
-router.get('/:id', function(req,res,next){
-
+router.get('/', (req,res,next)=>{
   let user
+  let token=req.cookies.token
+
+  if(!token){
+    return next({ status: 400, message: 'Please log-in.' })
+  }
+  let base64Url = token.split('.')[1];
+  let base64 = base64Url.replace('-', '+').replace('_', '/');
+  let parsed = JSON.parse(atob(base64));
+  let id = parsed.userId
 
   knex('users')
   .where('id',id)
   .first()
   .then(row=>{
     user = row
-  }).then(data=>{
+    return user
+  })
+  .then(data=>{
     if (!data) {
       return next({ status: 400, message: 'Bad email or password' })
     }
@@ -24,8 +35,7 @@ router.get('/:id', function(req,res,next){
       if (err) {
         return res.send(false)
       }
-
-      res.send(true)
+      res.json(user.id)
     })
   })
 })
