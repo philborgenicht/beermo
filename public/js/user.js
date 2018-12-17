@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function(){
   //   let userid=event.target.id.value
     verifyUser()
     .then(verified=>{
-      console.log(verified)
-      if(verified.data===false){
-        return
+
+      if(typeof verified.data !== 'number'){
+        return window.open('./aboutus.html','_self')
       }
     getMyInfo(id)
     .then( results => {
