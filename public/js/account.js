@@ -7,8 +7,8 @@ const appendage=document.getElementById('acctinfo')
 
   verifyUser()
   .then(verified=>{
-    if(!verified){
-      return
+    if(typeof verified.data !== 'number'){
+      return window.open('./aboutus.html','_self')
     }
 
     getMyAccount(id)
