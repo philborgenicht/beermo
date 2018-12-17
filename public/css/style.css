@@ -8,14 +8,26 @@
 
 
 .brewery_listing{
-  font-size: 20px;
   padding-left: 10vw;
   padding-right: 10vw;
+
+}
+
+body{
+  font-size: 20px;
   text-shadow:
   -1px -1px 0 white,
   1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  -1px 1px 0  white,
+  1px 1px 0  white;
+}
+
+nav{
+  text-shadow:
+  -1px -1px 0 pink,
+  1px -1px 0 pink,
+  -1px 1px 0 pink,
+  1px 1px 0 pink;
 }
 
 
@@ -33,6 +45,23 @@
 
 #companyBio{
   line-height: 30px
+}
+
+nav{
+  text-shadow:
+  -1px -1px 0 orange,
+  1px -1px 0 orange,
+  -1px 1px 0  orange,
+  1px 1px 0  orange;
+}
+
+.btn-large{
+  text-shadow:
+  -1px -1px 0 blue,
+  1px -1px 0 blue,
+  -1px 1px 0  blue,
+  1px 1px 0  blue;
+
 }
 
 a{
