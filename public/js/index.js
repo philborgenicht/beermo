@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
 
-
   form.addEventListener('submit', function(event) {
     event.preventDefault()
     let fname = document.getElementById('first_name-input').value
