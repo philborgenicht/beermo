@@ -68,7 +68,9 @@ router.post('/', function(req,res,next){
     .then((data) => {
 
       if (!data) {
-        return next({ status: 400, message: 'Bad email or password' })
+        let toastHTML = '<span>I am toast content</span><button class="btn-flat toast-action">Undo</button>';
+  M.toast({html: toastHTML});
+        return next({ status: 400, message: 'Bad email or password' }) && toastHTML
       }
       const claim = { userId: user.id }
 

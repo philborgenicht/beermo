@@ -7,7 +7,6 @@ function getMyInfo(id){
   return axios.get(`users/${id}`)
 }
 
-
 function getMyFavoriteBeer(id){
   return axios.get(`favorites/${id}`)
 }
