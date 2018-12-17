@@ -31,3 +31,7 @@ function login(user){
 function verifyUser(){
   return axios.get('token/')
 }
+
+function logOut(){
+  return axios.delete('token/')
+}
