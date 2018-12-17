@@ -5,7 +5,7 @@ let bcrypt = require('bcryptjs')
 let salt = bcrypt.genSaltSync(10)
 
 router.post('/', (req,res,next) => {
-  let passWord = req.body.password
+  let passWord = req.body.hashed_password
   let hash = bcrypt.hashSync(passWord, 8);
   let body = req.body
   body[ 'hashed_password' ] = hash;
