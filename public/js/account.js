@@ -11,6 +11,7 @@ const appendage2=document.getElementById('acctinfo2')
   .then(verified=>{
     if(typeof verified.data !== 'number'){
       return window.open('./aboutus.html','_self')
+
     }
     let id = verified.data
 
