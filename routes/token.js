@@ -90,7 +90,7 @@ router.post('/', function(req,res,next){
     })
 })
 
-router.delete('/token', (req, res) => {
+router.delete('/', (req, res) => {
   res.clearCookie('token')
   res.end()
 })
