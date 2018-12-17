@@ -41,7 +41,7 @@ router.get('/', (req,res,next)=>{
 })
 
 router.post('/', function(req,res,next){
-  
+
   const { email, password } = req.body
   if (!email || !email.trim()) {
     return next({ status: 400, message: 'Email must not be blank' })
