@@ -5,6 +5,15 @@
  *
  * Made By MaterializeCSS.com
  */
+
+
+
+
+
+.materialize-textarea{
+  color:black;
+}
+
 .navlogo{
   max-width:50px;
   background-color: #000080
@@ -27,6 +36,10 @@ a{
 
 .phil{
   font-size: 35px;
+}
+
+.sausage{
+  font-size: 25px;
 }
 
 th{
