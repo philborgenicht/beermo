@@ -5,17 +5,12 @@
  *
  * Made By MaterializeCSS.com
  */
-.notpink{
-  text-shadow:
-  -1px -1px 0 black,
-  1px -1px 0 black,
-  -1px 1px 0 black,
-  1px 1px 0 black;
-}
+
 
 .brewery_listing{
   padding-left: 10vw;
-  padding-right: 10vw
+  padding-right: 10vw;
+
 }
 
 body{
@@ -23,8 +18,8 @@ body{
   text-shadow:
   -1px -1px 0 white,
   1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  -1px 1px 0  white,
+  1px 1px 0  white;
 }
 
 nav{
@@ -50,6 +45,23 @@ nav{
 
 #companyBio{
   line-height: 30px
+}
+
+nav{
+  text-shadow:
+  -1px -1px 0 orange,
+  1px -1px 0 orange,
+  -1px 1px 0  orange,
+  1px 1px 0  orange;
+}
+
+.btn-large{
+  text-shadow:
+  -1px -1px 0 blue,
+  1px -1px 0 blue,
+  -1px 1px 0  blue,
+  1px 1px 0  blue;
+
 }
 
 a{
