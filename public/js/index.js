@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
       if (verified.data) {
         let loginButton1 = document.getElementById('login1')
         let loginButton2 = document.getElementById('login2')
-        loginButton1.innerText = "logout"
-        loginButton2.innerText = "logout"
-        loginButton2.addEventListener('click', function(event) {
+        loginButton1.innerText = "Log Out"
+        loginButton2.innerText = "Log Out"
+        loginButton1.addEventListener('click', function(event) {
+
           logout()
         })
       }

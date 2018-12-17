@@ -3,11 +3,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 let tableBody=document.getElementById('tableBody')
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 8221f1c255e76da2dc40a16220082e60fb9a8bc0
 populateFavorTable()
 .then(results=>{
   console.log(results.data)
