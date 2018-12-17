@@ -9,9 +9,13 @@ const appendage=document.getElementById('acctinfo')
   .then(verified=>{
     if(typeof verified.data !== 'number'){
       return window.open('./aboutus.html','_self')
+  
     }
     let id = verified.data
-    
+
+
+    }
+
     getMyAccount(id)
     .then( results => {
       for (var i = 0; i < results.data.length; i++) {
