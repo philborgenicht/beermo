@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 let knex = require('../knex')
 let cors = require('cors')
-router.use(cors())
+// router.use(cors())
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
