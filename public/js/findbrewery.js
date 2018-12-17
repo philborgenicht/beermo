@@ -13,14 +13,12 @@ searchButton.addEventListener('click', function(event){
      let li=document.createElement('li')
      li.setAttribute('class', 'brewery_listing')
      li.innerText=`Listing # ${i+1}:
-
      Brewery Name: ${response.data[i].name},
-
      Brewery Type: ${response.data[i].brewery_type},
-
      Address : ${response.data[i].street}, ${response.data[i].city},
+     Website: ${response.data[i].website_url}
 
-     Website: ${response.data[i].website_url}`
+     `
 
 
      brewlist.appendChild(li)
