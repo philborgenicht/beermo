@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 router.get('/:id', function(req,res,next){
   let email=req.body.email
   knex('users')
-  .where('email',email)
+  .where('id',id)
   .then(data=>{
     res.send(data)
   })
