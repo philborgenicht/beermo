@@ -32,6 +32,6 @@ function verifyUser(){
   return axios.get('token/')
 }
 
-function logOut(){
+function logout(){
   return axios.delete('token/')
 }
