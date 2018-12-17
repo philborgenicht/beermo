@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
         loginButton1.innerText = "logout"
         loginButton2.innerText = "logout"
         loginButton2.addEventListener('click', function(event) {
-          function delete_cookie( name ) {
-            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-          }        })
+          logout()
+        })
       }
     })
 
