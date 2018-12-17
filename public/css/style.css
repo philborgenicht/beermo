@@ -6,9 +6,11 @@
  * Made By MaterializeCSS.com
  */
 
+
 .brewery_listing{
   padding-left: 10vw;
   padding-right: 10vw;
+
 }
 
 body{
@@ -18,6 +20,14 @@ body{
   1px -1px 0 white,
   -1px 1px 0  white,
   1px 1px 0  white;
+}
+
+nav{
+  text-shadow:
+  -1px -1px 0 pink,
+  1px -1px 0 pink,
+  -1px 1px 0 pink,
+  1px 1px 0 pink;
 }
 
 
