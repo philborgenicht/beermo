@@ -13,7 +13,7 @@ router.get('/', (req,res,next)=>{
   let token=req.cookies.token
 
   if(!token){
-    return next({ status: 400, message: 'Please log-in.' })
+    return res.send("")
   }
   let base64Url = token.split('.')[1];
   let base64 = base64Url.replace('-', '+').replace('_', '/');
