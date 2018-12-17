@@ -20,7 +20,6 @@ const appendage2=document.getElementById('acctinfo2')
       let data = results.data[0]
       let data2 = results.data[1]
 
-      console.log('data1', data, 'data2',data2)
 
       for (let i = 0; i < data.length; i++) {
         let li = document.createElement('li')
