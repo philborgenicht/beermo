@@ -7,6 +7,8 @@ let searchButton = document.getElementById("search")
 searchButton.addEventListener('click', function(event){
   let userText = document.getElementById("textarea1")
   axios.get(`https://api.openbrewerydb.org/breweries?by_state=${userText.value}`)
+  axios.get(`https://api.openbrewerydb.org/breweries?by_city=${userText.value}`)
+  axios.get(`https://api.openbrewerydb.org/breweries?by_name=${userText.value}`)
    .then(function(response) {
      axios.get(response.data)
      for(let i=0; i<response.data.length; i++){
@@ -27,7 +29,8 @@ searchButton.addEventListener('click', function(event){
    }
    })
    .catch(function(error) {
-      console.log('error')
+      li.innerText="sorry we couldn't find your request"
+      brewlist.appendChild(li)
   })
 })
 
