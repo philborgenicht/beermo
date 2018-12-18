@@ -19,8 +19,12 @@ function populateFavorTable(){
   return axios.get('favors/')
 }
 
-function deleteUser(user){
-  return axios.delete(`users/${user}`,user)
+function postNewFavor(id){
+  return axios.post('favors/', id)
+}
+
+function deleteUser(id){
+  return axios.delete(`users/${id}`, id)
 }
 
 function login(user){
@@ -36,6 +40,5 @@ function logout(){
 }
 
 function deleteUserConfirm(user){
-  console.log("user info", user)
   return axios.delete(`token/${user.email}`,user)
 }
