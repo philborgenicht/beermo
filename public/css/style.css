@@ -52,7 +52,14 @@ nav{
   color:black;
 }
 
+@media all and (max-width: 550px){
+  .navlogo, .summary {
+    display:none;
+  }
+}
+
 .navlogo{
+  max-height:56px;
   max-width:50px;
   background-color: #000080;
 }
