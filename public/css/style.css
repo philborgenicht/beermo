@@ -6,7 +6,9 @@
  * Made By MaterializeCSS.com
  */
 
-
+#checkbox{
+  color: green;
+}
 
 #acctinfo{
   padding-right: 2vw;
@@ -19,7 +21,14 @@
 .loginform{
   padding-left:10vw;
   padding-right: 10vw;
+}
 
+#nav-mobile{
+  background-color:orange;
+}
+
+.finished{
+  font-family: 'Kalam', cursive;
 }
 
 .brewery_listing{
@@ -77,6 +86,39 @@ nav{
   -1px 1px 0  blue,
   1px 1px 0  blue;
 
+}
+
+#submitNewFavor{
+font-family: 'Kalam', cursive;
+background-color: orange;
+color:white;
+text-shadow:
+-1px -1px 0 blue,
+1px -1px 0 blue,
+-1px 1px 0  blue,
+1px 1px 0  blue;
+}
+
+#submit1{
+font-family: 'Kalam', cursive;
+background-color: white;
+color:black;
+text-shadow:
+-1px -1px 0 white,
+1px -1px 0 white,
+-1px 1px 0  white,
+1px 1px 0  white;
+}
+
+#deleteme{
+  font-family: 'Kalam', cursive;
+  background-color: white;
+  color:black;
+  text-shadow:
+  -1px -1px 0 orange,
+  1px -1px 0 orange,
+  -1px 1px 0  orange,
+  1px 1px 0  orange;
 }
 
 a{
