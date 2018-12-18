@@ -37,7 +37,7 @@ nav{
 
 .navlogo{
   max-width:50px;
-  background-color: #000080
+  background-color: #000080;
 }
 .parentheses{
   font-size: 10px
@@ -142,3 +142,5 @@ form{
 
 body{
 background-image: url("../wood-texture-1148528.jpg");
+
+}

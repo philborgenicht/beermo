@@ -51,8 +51,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     createNewUser(user)
       .then(result => {
-
+return window.open('./aboutus.html','_self')
       })
+
   })
 
 })
