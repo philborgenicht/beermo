@@ -278,7 +278,7 @@ let elevenlisting=document.getElementsByClassName('11')
               })
             }
 
-            let eleventhbutton=document.getElementsByClassName('11')
+            let eleventhbutton=document.getElementsByClassName('10')
             for(let i=0; i<eleventhbutton.length; i++){
               eleventhbutton[i].addEventListener('click', function(){
                 eleventhbutton[i].innerText="completed"
