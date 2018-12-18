@@ -57,16 +57,8 @@ document.addEventListener("DOMContentLoaded", function(){
       if(typeof verified.data !== 'number'){
         return window.open('./aboutus.html','_self')
       }
-      let id=verified.data
       logout()
       window.open('./delete_user_login.html','_self')
-        .then(result=>{
-          login(user)
-          let id = result.id
-        }).then()
-      deleteUser(id)
-        .then(data=>{
-        })
       })
     })
   })
