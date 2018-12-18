@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     populateFavorTable()
     .then(results=>{
-      console.log(results.data)
       for (var i = 0; i < results.data.length; i++) {
         let newRow = document.createElement('tr')
         let newData= document.createElement('td')

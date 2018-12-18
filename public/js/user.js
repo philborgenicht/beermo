@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function(){
   const deleteButton=document.getElementById("deleteme")
   const form=document.getElementById('form')
   const usernumber=document.getElementById('usernumber')
+  const deleteButton=document.getElementById('deleteme')
 
-  // form.addEventListener('submit', function(event){
-  //   let userid=event.target.id.value
+
     verifyUser()
     .then(verified=>{
       if(typeof verified.data !== 'number'){
@@ -54,18 +54,19 @@ document.addEventListener("DOMContentLoaded", function(){
       })
     })
 
-// })
-    // deleteButton.addEventListener('click', function(){
-    //   deleteUser(id)
-    //   .then(data=>{
-    //     console.log(data)
-    //   })
-    // })
-
-
-
-
-
-
-
+})
+  deleteButton.addEventListener('click', function(){
+    verifyUser()
+    .then(verified=>{
+      if(typeof verified.data !== 'number'){
+        return window.open('./aboutus.html','_self')
+      }
+      let id=verified.data
+      
+      deleteUser(id)
+        .then(data=>{
+          console.log(data)
+        })
+      })
+    })
 })
