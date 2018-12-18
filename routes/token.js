@@ -96,4 +96,14 @@ router.delete('/', (req, res) => {
   res.end()
 })
 
+router.delete('/:id', (req, res, next)=>{
+  let id = req.params.id
+  knex('users')
+    .where('id', id)
+    .then(result=>{
+      res.clearCookie('token')
+      res.send(result.id)
+    })
+})
+
 module.exports = router;
