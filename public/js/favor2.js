@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(){
             <li class=${i+1}>Favor Listing: ${results.data[i].id}</li>
             <li class=${i+1}>Favor Description: ${results.data[i].favor_name}</li>
             <li class=${i+1}>Favor Value: ${results.data[i].favor_size}</li>
-            <li class=${i+1}><button class=${i+1}>pending</button></li>
+            <li class=${i+1}><button  id="willsbuttons" class=${i+1}>pending</button></li>
             `
 
 let firstlisting=document.getElementsByClassName('1')
