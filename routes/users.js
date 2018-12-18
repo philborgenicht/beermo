@@ -43,9 +43,10 @@ router.patch('/:id', (req, res, next)=>{
   })
 })
 
-router.delete('/:id', (req, res, next)=>{
+router.delete('/:email', (req, res, next)=>{
+  console.log("back-end",req.body, req.params)
   knex('users')
-  .where('id', req.params.id)
+  .where('email', req.params.email)
   .returning(['first_name','last_name'])
   .del()
   .then(data=>{

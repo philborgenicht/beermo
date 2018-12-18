@@ -69,9 +69,8 @@ router.post('/', function(req,res,next){
     .then((data) => {
 
       if (!data) {
-        let toastHTML = '<span>I am toast content</span><button class="btn-flat toast-action">Undo</button>';
-  M.toast({html: toastHTML});
-  return next({ status: 400, message: 'Bad email or password' }) && toastHTML
+
+  return next({ status: 400, message: 'Bad email or password' }) 
       }
       const claim = { userId: user.id }
 
@@ -97,14 +96,16 @@ router.delete('/', (req, res) => {
 })
 
 router.delete('/:user', (req, res, next)=>{
-  let email = req.params.email
+  let email = req.body.email
+  console.log("back-end",email)
   knex('users')
-    .select('id')
+    .select('id','email')
     .where('email', email)
     .then(result=>{
       res.clearCookie('token')
       res.send(result)
     })
 })
+
 
 module.exports = router;

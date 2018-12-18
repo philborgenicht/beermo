@@ -4,15 +4,13 @@ document.addEventListener("DOMContentLoaded", function(){
   deleteUser.addEventListener('submit', event=>{
     let password = document.getElementById("password-inputD").value
     let email = document.getElementById("email-inputD").value
-
+    console.log("email",email)
     let user ={}
     user.email = email
-    user.password = password
-    deleteUserConfirm(user)
-    .then(data=>{
-      let id = data.id
-      deleteUser(id)
-    })
+    user.hashed_password = password
+
+    // deleteUserConfirm(user)
+    deleteUser(user)
   })
 
 })
