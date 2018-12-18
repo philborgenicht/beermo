@@ -96,4 +96,15 @@ router.delete('/', (req, res) => {
   res.end()
 })
 
+router.delete('/:user', (req, res, next)=>{
+  let email = req.params.email
+  knex('users')
+    .select('id')
+    .where('email', email)
+    .then(result=>{
+      res.clearCookie('token')
+      res.send(result)
+    })
+})
+
 module.exports = router;
