@@ -19,6 +19,10 @@ function populateFavorTable(){
   return axios.get('favors/')
 }
 
+function postNewFavor(id){
+  return axios.post('favors/', id)
+}
+
 function deleteUser(id){
   return axios.delete(`users/${id}`)
 }
