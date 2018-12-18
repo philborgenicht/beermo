@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const deleteButton=document.getElementById("deleteme")
   const form=document.getElementById('form')
   const usernumber=document.getElementById('usernumber')
-  const deleteButton=document.getElementById('deleteme')
+  // const deleteButton=document.getElementById('deleteme')
 
 
     verifyUser()
@@ -15,19 +15,17 @@ document.addEventListener("DOMContentLoaded", function(){
       }
       let id=verified.data
     getMyInfo(id)
+
     .then( results => {
+          console.log(results.data)
         for (var i = 0; i < results.data.length; i++) {
           let li = document.createElement('li')
 
           li.innerText =
           `Date I joined: ${results.data[i].created_at.substring(0,10)}
-
           First Name: ${results.data[i].first_name}
-
           Last Name: ${results.data[i].last_name}
-
           Email Address: ${results.data[i].email}
-
           `
           userdata.appendChild(li)
         }
@@ -47,14 +45,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
           li.innerText =
           `My Favorite Beer: ${results.data[i].beer_id}
-
           `
           favorite.appendChild(li)
         }
       })
     })
 
-})
+// })
   deleteButton.addEventListener('click', function(){
     verifyUser()
     .then(verified=>{
@@ -62,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function(){
         return window.open('./aboutus.html','_self')
       }
       let id=verified.data
-      
+
       deleteUser(id)
         .then(data=>{
           console.log(data)
