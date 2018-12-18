@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(){
-
   const userdata=document.getElementById('userdata')
   const favorite=document.getElementById('favorite')
   const deleteButton=document.getElementById("deleteme")
   const form=document.getElementById('form')
   const usernumber=document.getElementById('usernumber')
-  const deleteButton=document.getElementById('deleteme')
 
 
     verifyUser()
@@ -41,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function(){
       }
       getMyFavoriteBeer(id)
       .then( results => {
-        console.log(results.data)
         for (var i = 0; i < results.data.length; i++) {
           let li = document.createElement('li')
 
@@ -54,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function(){
       })
     })
 
-})
   deleteButton.addEventListener('click', function(){
     verifyUser()
     .then(verified=>{
@@ -62,11 +58,15 @@ document.addEventListener("DOMContentLoaded", function(){
         return window.open('./aboutus.html','_self')
       }
       let id=verified.data
-      
+      logout()
+      window.open('./delete_user_login.html','_self')
+        .then(result=>{
+          login(user)
+          let id = result.id
+        }).then()
       deleteUser(id)
         .then(data=>{
-          console.log(data)
         })
       })
     })
-})
+  })

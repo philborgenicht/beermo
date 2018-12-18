@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     user.email = email.value
     updateUser(user)
     .then( results => {
-      console.log(results.data);
     })
   })
 });

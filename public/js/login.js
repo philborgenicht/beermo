@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function(){
     login(user)
       .then(data=>{
         if(data.status===200){
-          return window.open('./aboutus.html','_self')
+          return window.open('./user.html','_self')
 
         }
-
+ 
       })
   })
 
