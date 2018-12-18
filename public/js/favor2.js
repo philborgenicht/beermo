@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
   let tableBody=document.getElementById('tableBody')
+  let form=document.getElementById('postNewFavor')
+  let newDesc=document.getElementById('favorDesc').value
+  let newVal=document.getElementById('favorVal').value
 
 
   verifyUser()
@@ -23,6 +26,16 @@ document.addEventListener("DOMContentLoaded", function(){
         newRow.appendChild(newData)
       }
     })
+  })
+
+  form.addEventListener('submit', function(event){
+    let newFavor={}
+    newFavor.favor_name=event.target.favorDesc.value
+    newFavor.favor_size=event.target.favorVal.value
+    postNewFavor(newFavor)
+
+
+
   })
 
 })
