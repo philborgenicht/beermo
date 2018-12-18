@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 verifyUser()
   .then(verified => {
     if (verified.data) {
@@ -10,3 +12,4 @@ verifyUser()
     })
     }
   })
+});
