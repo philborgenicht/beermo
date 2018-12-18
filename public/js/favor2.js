@@ -317,7 +317,7 @@ let elevenlisting=document.getElementsByClassName('11')
     newFavor.favor_name=event.target.favorDesc.value
     newFavor.favor_size=event.target.favorVal.value
     if(newFavor.favor_size>3){
-      alert("too generous, young padawan")
+      alert("generosity of those levels is not tolerated here")
     }
     postNewFavor(newFavor)
   })
