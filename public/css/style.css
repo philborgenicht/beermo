@@ -21,7 +21,14 @@
 .loginform{
   padding-left:10vw;
   padding-right: 10vw;
+}
 
+#nav-mobile{
+  background-color:orange;
+}
+
+.finished{
+  font-family: 'Kalam', cursive;
 }
 
 .brewery_listing{
