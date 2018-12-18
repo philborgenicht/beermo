@@ -1,18 +1,23 @@
 document.addEventListener("DOMContentLoaded", function(){
-  const deleteUser = document.getElementById("delete-login-form")
+  const deleteUserButton = document.getElementById("delete-login-form")
 
-  deleteUser.addEventListener('submit', event=>{
+  deleteUserButton.addEventListener('submit', event=>{
+    event.preventDefault()
     let password = document.getElementById("password-inputD").value
     let email = document.getElementById("email-inputD").value
-
+    console.log("email",email)
     let user ={}
-    user.email = email
-    user.password = password
-    deleteUserConfirm(user)
-    .then(data=>{
-      let id = data.id
-      deleteUser(id)
-    })
+    user['email'] = email
+    user['password'] = password
+
+    login(user)
+      .then(result=>{
+        deleteUser(user)
+          .then(result=>{
+            logout()
+            return window.open('./aboutus.html','_self')
+          })
+      })
   })
 
 })
