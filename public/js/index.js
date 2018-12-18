@@ -12,6 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   verifyUser()
     .then(verified => {
+      if(typeof verified.data !== 'number'){
+        favorListing.style.display = "none"
+        favorSide.style.display = "none"
+        account1.style.display = "none"
+        account2.style.display = "none"
+        user1.style.display = "none"
+        user2.style.display = "none"
+      }
       if (verified.data) {
         let loginButton1 = document.getElementById('login1')
         let loginButton2 = document.getElementById('login2')
@@ -24,14 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       if (verified.data){
         signUp.style.display = "none"
-      }
-      if(typeof verified.data !== 'number'){
-        favorListing.style.display = "none"
-        favorSide.style.display = "none"
-        account1.style.display = "none"
-        account2.style.display = "none"
-        user1.style.display = "none"
-        user2.style.display = "none"
       }
     })
 
