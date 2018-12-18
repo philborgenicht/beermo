@@ -81,6 +81,39 @@ nav{
 
 }
 
+#submitNewFavor{
+font-family: 'Kalam', cursive;
+background-color: orange;
+color:white;
+text-shadow:
+-1px -1px 0 blue,
+1px -1px 0 blue,
+-1px 1px 0  blue,
+1px 1px 0  blue;
+}
+
+#submit1{
+font-family: 'Kalam', cursive;
+background-color: white;
+color:black;
+text-shadow:
+-1px -1px 0 white,
+1px -1px 0 white,
+-1px 1px 0  white,
+1px 1px 0  white;
+}
+
+#deleteme{
+  font-family: 'Kalam', cursive;
+  background-color: white;
+  color:black;
+  text-shadow:
+  -1px -1px 0 orange,
+  1px -1px 0 orange,
+  -1px 1px 0  orange,
+  1px 1px 0  orange;
+}
+
 a{
   font-size: 22px;
 }
