@@ -6,7 +6,9 @@
  * Made By MaterializeCSS.com
  */
 
-
+#checkbox{
+  color: green;
+}
 
 #acctinfo{
   padding-right: 2vw;
