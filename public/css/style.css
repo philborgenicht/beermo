@@ -6,9 +6,26 @@
  * Made By MaterializeCSS.com
  */
 
+
+
+#acctinfo{
+  padding-right: 2vw;
+}
+
+#acctinfo2{
+  padding-left: 2vw;
+}
+
+.loginform{
+  padding-left:10vw;
+  padding-right: 10vw;
+
+}
+
 .brewery_listing{
   padding-left: 10vw;
   padding-right: 10vw;
+
 }
 
 body{
@@ -20,6 +37,14 @@ body{
   1px 1px 0  white;
 }
 
+nav{
+  text-shadow:
+  -1px -1px 0 pink,
+  1px -1px 0 pink,
+  -1px 1px 0 pink,
+  1px 1px 0 pink;
+}
+
 
 .materialize-textarea{
   color:black;
@@ -27,7 +52,7 @@ body{
 
 .navlogo{
   max-width:50px;
-  background-color: #000080
+  background-color: #000080;
 }
 .parentheses{
   font-size: 10px
@@ -132,3 +157,5 @@ form{
 
 body{
 background-image: url("../wood-texture-1148528.jpg");
+
+}
