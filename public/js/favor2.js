@@ -316,8 +316,22 @@ let elevenlisting=document.getElementsByClassName('11')
     let newFavor={}
     newFavor.favor_name=event.target.favorDesc.value
     newFavor.favor_size=event.target.favorVal.value
+    if(newFavor.favor_size>3){
+      alert("too generous, young padawan")
+    }
     postNewFavor(newFavor)
   })
+
+  // form.addEventListener('submit', function(event){
+  //   let newTrans={}
+  //
+  //   newTrans.recipient_id=event.target.recipientid.value
+  //   newTrans.user_sender_id=event.target.senderid.value
+  //   newTrans.favor=event.target.favorDesc.value
+  //   newTrans.beer_id=event.target.beerid.value
+  //
+  //   postNewTransaction(newTrans)
+  // })
 
 
 
