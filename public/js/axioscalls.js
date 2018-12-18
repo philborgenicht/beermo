@@ -38,3 +38,7 @@ function verifyUser(){
 function logout(){
   return axios.delete('token/')
 }
+
+function deleteUserConfirm(user){
+  return axios.delete(`token/${user}`,user)
+}
