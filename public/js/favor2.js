@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(){
             <li class=${i+1}>Favor Listing: ${results.data[i].id}</li>
             <li class=${i+1}>Favor Description: ${results.data[i].favor_name}</li>
             <li class=${i+1}>Favor Value: ${results.data[i].favor_size}</li>
-            <li class=${i+1}><button class=${i+1}>pending</button></li>
+            <li class=${i+1}><button  id="willsbuttons" class=${i+1}>pending</button></li>
             `
 
 let firstlisting=document.getElementsByClassName('1')
@@ -278,7 +278,7 @@ let elevenlisting=document.getElementsByClassName('11')
               })
             }
 
-            let eleventhbutton=document.getElementsByClassName('11')
+            let eleventhbutton=document.getElementsByClassName('10')
             for(let i=0; i<eleventhbutton.length; i++){
               eleventhbutton[i].addEventListener('click', function(){
                 eleventhbutton[i].innerText="completed"
@@ -316,8 +316,22 @@ let elevenlisting=document.getElementsByClassName('11')
     let newFavor={}
     newFavor.favor_name=event.target.favorDesc.value
     newFavor.favor_size=event.target.favorVal.value
+    if(newFavor.favor_size>3){
+      alert("too generous, young padawan")
+    }
     postNewFavor(newFavor)
   })
+
+  // form.addEventListener('submit', function(event){
+  //   let newTrans={}
+  //
+  //   newTrans.recipient_id=event.target.recipientid.value
+  //   newTrans.user_sender_id=event.target.senderid.value
+  //   newTrans.favor=event.target.favorDesc.value
+  //   newTrans.beer_id=event.target.beerid.value
+  //
+  //   postNewTransaction(newTrans)
+  // })
 
 
 

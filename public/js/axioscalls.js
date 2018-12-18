@@ -46,3 +46,7 @@ function deleteUserConfirm(user){
 function updateUser(id){
   return axios.patch(`users/${id}`, id)
 }
+
+function postNewTransaction(id){
+  return axios.post('transactions/', id)
+}

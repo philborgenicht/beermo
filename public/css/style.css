@@ -6,6 +6,16 @@
  * Made By MaterializeCSS.com
  */
 
+ #willsbuttons{
+ font-family: 'Kalam', cursive;
+ background-color: white;
+ color:black;
+ text-shadow:
+ -1px -1px 0 white,
+ 1px -1px 0 white,
+ -1px 1px 0  white,
+ 1px 1px 0  white;
+ }
 #checkbox{
   color: green;
 }
@@ -59,7 +69,14 @@ nav{
   color:black;
 }
 
+@media all and (max-width: 550px){
+  .navlogo, .summary {
+    display:none;
+  }
+}
+
 .navlogo{
+  max-height:56px;
   max-width:50px;
   background-color: #000080;
 }
