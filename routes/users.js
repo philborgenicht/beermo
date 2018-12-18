@@ -5,15 +5,15 @@ let cors = require('cors')
 // router.use(cors())
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next)=>{
   knex('users')
   .then(data=>{
     res.send(data)
   })
 })
 
-router.get('/:id', function(req,res,next){
-  let email=req.body.email
+router.get('/:id', (req,res,next)=>{
+  let id=req.params.id
   knex('users')
   .where('id',id)
   .then(data=>{
@@ -21,7 +21,7 @@ router.get('/:id', function(req,res,next){
   })
 })
 
-router.post('/', function(req,res,next){
+router.post('/', (req,res,next)=>{
   knex('users')
   .insert(req.body)
   .returning(['first_name','last_name','email'])
@@ -33,7 +33,7 @@ router.post('/', function(req,res,next){
   })
 })
 
-router.patch('/:id', function(req, res, next){
+router.patch('/:id', (req, res, next)=>{
   knex('users')
   .update(req.body)
   .where('id', req.params.id)
@@ -43,10 +43,10 @@ router.patch('/:id', function(req, res, next){
   })
 })
 
-router.delete('/:id', function(req, res, next){
+router.delete('/:id', (req, res, next)=>{
   knex('users')
   .where('id', req.params.id)
-  .returning('*')
+  .returning(['first_name','last_name'])
   .del()
   .then(data=>{
     res.send(data)

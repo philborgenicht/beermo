@@ -1,8 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
   let form = document.getElementById("form")
+  let signUp=document.getElementById("download-button")
+  let favorListing=document.getElementById('favor1')
+  let favorSide=document.getElementById('favor2')
+  let account1=document.getElementById('account1')
+  let account2=document.getElementById('account2')
+  let user1=document.getElementById('user1')
+  let user2=document.getElementById('user2')
+
+
 
   verifyUser()
     .then(verified => {
+      if(typeof verified.data !== 'number'){
+        favorListing.style.display = "none"
+        favorSide.style.display = "none"
+        account1.style.display = "none"
+        account2.style.display = "none"
+        user1.style.display = "none"
+        user2.style.display = "none"
+      }
       if (verified.data) {
         let loginButton1 = document.getElementById('login1')
         let loginButton2 = document.getElementById('login2')
@@ -11,7 +28,11 @@ document.addEventListener("DOMContentLoaded", function() {
         loginButton1.addEventListener('click', function(event) {
 
           logout()
+          loginButton1.setAttribute('href', 'aboutus.html')
         })
+      }
+      if (verified.data){
+        signUp.style.display = "none"
       }
     })
 
@@ -30,8 +51,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     createNewUser(user)
       .then(result => {
-
+return window.open('./aboutus.html','_self')
       })
+
   })
 
 })
