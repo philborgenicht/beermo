@@ -3,6 +3,7 @@
 exports.up = function(knex) {
   return knex.schema.createTable('users', (table) => {
     table.increments()
+    table.boolean('is_active').notNullable().defaultTo(true)
     table.string('first_name').notNullable().defaultTo('')
     table.string('last_name').notNullable().defaultTo('')
     table.string('email').notNullable().defaultTo('')

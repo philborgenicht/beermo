@@ -17,21 +17,21 @@ const appendage2=document.getElementById('acctinfo2')
 
     getMyAccount(id)
     .then( results => {
-      let data = results.data[0]
+      let data1 = results.data[0]
       let data2 = results.data[1]
 
 
-      for (let i = 0; i < data.length; i++) {
+      for (let i = 0; i < data1.length; i++) {
         let li = document.createElement('li')
 
         li.innerText =
         `
         Transaction# ${i+1}:
 
-        Them: ${data[i].sender_first_name} ${data[i].sender_last_name}
-        Beer Earned: ${data[i].beer_id}
-        Favor Performed: ${data[i].favor}
-        Transaction Date: ${data[i].created_at.substring(0,10)}
+        Them: ${data1[i].sender_first_name} ${data1[i].sender_last_name}
+        Beer Earned: ${data1[i].beer_id}
+        Favor Performed: ${data1[i].favor}
+        Transaction Date: ${data1[i].created_at.substring(0,10)}
         `
 
 
@@ -42,7 +42,7 @@ const appendage2=document.getElementById('acctinfo2')
         let li2 = document.createElement('li')
 
         li2.innerText =
-        `Them: ${data2[i].sender_first_name} ${data2[i].sender_last_name}
+        `Them: ${data2[i].first_name} ${data2[i].last_name}
 
         Beer Earned: ${data2[i].beer_id}
 

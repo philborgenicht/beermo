@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const deleteButton=document.getElementById("deleteme")
   const form=document.getElementById('form')
   const usernumber=document.getElementById('usernumber')
+  const updateButton=document.getElementById('updateme')
 
 
     verifyUser()
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function(){
       if(!verified){
         return
       }
+      let id=verified.data
       getMyFavoriteBeer(id)
       .then( results => {
         for (var i = 0; i < results.data.length; i++) {
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
       })
     })
 
-  deleteButton.addEventListener('click', function(){
+  deleteButton.addEventListener('click', event=>{
     verifyUser()
     .then(verified=>{
       if(typeof verified.data !== 'number'){
@@ -56,6 +58,15 @@ document.addEventListener("DOMContentLoaded", function(){
       }
       logout()
       window.open('./delete_user_login.html','_self')
+      })
+    })
+
+    updateButton.addEventListener('click', event=>{
+      verifyUser()
+      .then(verified=>{
+        if(typeof verified.data !== 'number'){
+          return window.open('./update_form.html','_self')
+        }
       })
     })
   })
