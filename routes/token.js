@@ -57,12 +57,15 @@ router.post('/', function(req,res,next){
   .where('email',email)
   .first()
   .then(row=>{
-
       if (!row) {
         return next({ status: 400, message: 'Bad email or password' })
       }
 
       user = row
+
+      if(user.is_active===false){
+        return next({ status: 400, message: 'You Gone' })
+      }
 
       return bcrypt.compareSync(password, user.hashed_password)
     })
@@ -70,7 +73,7 @@ router.post('/', function(req,res,next){
 
       if (!data) {
 
-  return next({ status: 400, message: 'Bad email or password' }) 
+  return next({ status: 400, message: 'Bad email or password' })
       }
       const claim = { userId: user.id }
 

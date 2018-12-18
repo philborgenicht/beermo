@@ -23,8 +23,8 @@ function postNewFavor(id){
   return axios.post('favors/', id)
 }
 
-function deleteUser(id){
-  return axios.delete(`users/${id}`, id)
+function deleteUser(user){
+  return axios.patch(`users/delete/${user.email}`, user)
 }
 
 function login(user){
@@ -40,5 +40,9 @@ function logout(){
 }
 
 function deleteUserConfirm(user){
-  return axios.delete(`token/${user.email}`,user)
+  return axios.post(`token/${user.email}`,user)
+}
+
+function updateUser(id){
+  return axios.patch(`users/${id}`, id)
 }
