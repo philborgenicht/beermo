@@ -11,12 +11,18 @@ document.addEventListener("DOMContentLoaded", function(){
     login(user)
       .then(result=>{
         let id = result.id
+<<<<<<< HEAD
         window.open('./delete_user_login.html','_self')
         deleteUserConfirm(id)
           .then(data=>{
             let id = data.id
             deleteUser(id)
         })
+=======
+        window.open('./aboutus.html','_self')
+        deleteUser(id)
+        logout()
+>>>>>>> master
       })
   })
 
