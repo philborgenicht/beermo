@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function(){
       .then(data=>{
         console.log(data)
         if(data.status===200){
-          return window.open('./aboutus.html','_self')
+          return window.open('./user.html','_self')
 
         }
-
+ 
       })
   })
 
