@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function(){
     user.password = password
     login(user)
       .then(data=>{
+        if(data.status===200){
+          return window.open('./aboutus.html','_self')
+
+        }
 
       })
   })

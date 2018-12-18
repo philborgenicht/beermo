@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
   let tableBody=document.getElementById('tableBody')
-  
+
 
   verifyUser()
   .then(verified=>{
@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function(){
         let newData= document.createElement('td')
         // newRow.innerHtml =
         newData.innerText= `Favor Listing: ${results.data[i].id},
-                            Favor Description: ${results.data[i].favor_name},
-                            Favor Value: ${results.data[i].favor_size}`
+        Favor Description: ${results.data[i].favor_name},
+        Favor Value: ${results.data[i].favor_size}`
         tableBody.appendChild(newRow)
         newRow.appendChild(newData)
       }

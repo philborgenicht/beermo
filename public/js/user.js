@@ -10,21 +10,21 @@ document.addEventListener("DOMContentLoaded", function(){
   //   let userid=event.target.id.value
     verifyUser()
     .then(verified=>{
-
       if(typeof verified.data !== 'number'){
         return window.open('./aboutus.html','_self')
       }
+      let id=verified.data
     getMyInfo(id)
     .then( results => {
         for (var i = 0; i < results.data.length; i++) {
           let li = document.createElement('li')
 
           li.innerText =
-          `Date I joined: ${results.data[i].created_at},
+          `Date I joined: ${results.data[i].created_at.substring(0,10)}
 
-          First Name: ${results.data[i].first_name},
+          First Name: ${results.data[i].first_name}
 
-          Last Name: ${results.data[i].last_name},
+          Last Name: ${results.data[i].last_name}
 
           Email Address: ${results.data[i].email}
 

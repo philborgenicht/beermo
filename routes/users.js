@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/:id', function(req,res,next){
-  let email=req.body.email
+  let id=req.params.id
   knex('users')
   .where('id',id)
   .then(data=>{
