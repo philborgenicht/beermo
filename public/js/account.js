@@ -25,14 +25,13 @@ const appendage2=document.getElementById('acctinfo2')
         let li = document.createElement('li')
 
         li.innerText =
-        `Them: ${data[i].sender_first_name} ${data[i].sender_last_name}
+        `
+        Transaction# ${i+1}:
 
+        Them: ${data[i].sender_first_name} ${data[i].sender_last_name}
         Beer Earned: ${data[i].beer_id}
-
         Favor Performed: ${data[i].favor}
-
         Transaction Date: ${data[i].created_at.substring(0,10)}
-
         `
 
 

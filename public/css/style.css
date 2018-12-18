@@ -7,6 +7,21 @@
  */
 
 
+
+#acctinfo{
+  padding-right: 2vw;
+}
+
+#acctinfo2{
+  padding-left: 2vw;
+}
+
+.loginform{
+  padding-left:10vw;
+  padding-right: 10vw;
+
+}
+
 .brewery_listing{
   padding-left: 10vw;
   padding-right: 10vw;
