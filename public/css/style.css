@@ -31,11 +31,27 @@
 }
 
 #acctinfo{
-  padding-right:2vw;
+  text-align: left;
+  padding-right:0vw;
+  font-size: 40px;
+  color:white;
+  text-shadow:
+  -1px -1px 0 orange,
+  1px -1px 0 orange,
+  -1px 1px 0  orange,
+  1px 1px 0  orange;
 }
 
 #acctinfo2{
-  padding-left:2vw;
+  text-align: left;
+  padding-left:0vw;
+  font-size: 40px;
+  color: white;
+  text-shadow:
+  -1px -1px 0 blue,
+  1px -1px 0 blue,
+  -1px 1px 0  blue,
+  1px 1px 0  blue;
 }
 
 .loginform{
@@ -238,8 +254,4 @@ form{
 body{
 background-image: url("../wood-texture-1148528.jpg");
 
-}
-
-.toast{
-  
 }
