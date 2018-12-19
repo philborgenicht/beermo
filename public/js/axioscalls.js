@@ -50,7 +50,3 @@ function updateUser(user){
 function updateLogin(user){
   return axios.post('update/', user)
 }
-
-function postNewTransaction(id){
-  return axios.post('transactions/', id)
-}
