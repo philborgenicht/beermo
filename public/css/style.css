@@ -32,10 +32,24 @@
 
 #acctinfo{
   padding-right:2vw;
+  font-size: 40px;
+  color:blue;
+  text-shadow:
+  -1px -1px 0 orange,
+  1px -1px 0 orange,
+  -1px 1px 0  orange,
+  1px 1px 0  orange;
 }
 
 #acctinfo2{
   padding-left:2vw;
+  font-size: 40px;
+  color: blue;
+  text-shadow:
+  -1px -1px 0 orange,
+  1px -1px 0 orange,
+  -1px 1px 0  orange,
+  1px 1px 0  orange;
 }
 
 .loginform{
