@@ -6,6 +6,9 @@ exports.up = function(knex) {
 
     table.string('favor_name').unique().notNullable().defaultTo('')
     table.integer('favor_size').notNullable().defaultTo(1)
+
+    table.integer('lister').unsigned()
+    table.foreign('lister').references('users.id')
   })
 }
 
