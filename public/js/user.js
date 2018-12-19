@@ -13,22 +13,22 @@ document.addEventListener("DOMContentLoaded", function(){
         return window.open('./aboutus.html','_self')
       }
       let id=verified.data
-    getMyInfo(id)
+      getMyInfo(id)
 
-    .then( results => {
-          console.log(results.data)
-        for (var i = 0; i < results.data.length; i++) {
-          let li = document.createElement('li')
+      .then( results => {
+            console.log(results.data)
+          for (var i = 0; i < results.data.length; i++) {
+            let li = document.createElement('li')
 
-          li.innerText =
-          `Date I joined: ${results.data[i].created_at.substring(0,10)}
-          First Name: ${results.data[i].first_name}
-          Last Name: ${results.data[i].last_name}
-          Email Address: ${results.data[i].email}
-          `
-          userdata.appendChild(li)
-        }
-      })
+            li.innerText =
+            `Date I joined: ${results.data[i].created_at.substring(0,10)}
+            First Name: ${results.data[i].first_name}
+            Last Name: ${results.data[i].last_name}
+            Email Address: ${results.data[i].email}
+            `
+            userdata.appendChild(li)
+          }
+        })
     })
 
     verifyUser()
@@ -62,11 +62,6 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 
     updateButton.addEventListener('click', event=>{
-      verifyUser()
-      .then(verified=>{
-        if(typeof verified.data !== 'number'){
-          return window.open('./update_form.html','_self')
-        }
-      })
+      return window.open('./update_form.html','_self')
     })
   })

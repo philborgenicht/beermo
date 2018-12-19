@@ -138,6 +138,17 @@ text-shadow:
   1px 1px 0  orange;
 }
 
+#updateme{
+  font-family: 'Kalam', cursive;
+  background-color: white;
+  color:black;
+  text-shadow:
+  -1px -1px 0 orange,
+  1px -1px 0 orange,
+  -1px 1px 0  orange,
+  1px 1px 0  orange;
+}
+
 a{
   font-size: 22px;
 }

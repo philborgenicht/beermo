@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
         deleteUser(user)
           .then(result=>{
             logout()
-            return window.open('./aboutus.html','_self')
+            return window.open('./index.html','_self')
           })
       })
   })
