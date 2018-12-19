@@ -43,6 +43,10 @@ function deleteUserConfirm(user){
   return axios.post(`token/${user.email}`,user)
 }
 
-function updateUser(id){
-  return axios.patch(`users/${id}`, id)
+function updateUser(user){
+  return axios.patch(`users/${user.id}`, user)
+}
+
+function updateLogin(user){
+  return axios.post('update/', user)
 }
