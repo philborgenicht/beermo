@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   loginForm.addEventListener('submit', event=>{
+
     event.preventDefault()
+
+
+
 
     let password = document.getElementById("password-input").value
     let email = document.getElementById("email-input").value
@@ -13,13 +17,21 @@ document.addEventListener("DOMContentLoaded", function(){
     user.password = password
     login(user)
       .then(data=>{
-        console.log(data)
+        console.log(data.status)
+
+
+
+
+
         if(data.status===200){
           return window.open('./user.html','_self')
 
         }
- 
+
       })
+
+
+
   })
 
   })
