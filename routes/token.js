@@ -41,7 +41,7 @@ router.get('/', (req,res,next)=>{
 })
 
 router.post('/', function(req,res,next){
-
+  console.log(req.body)
   const { email, password } = req.body
   if (!email || !email.trim()) {
     return next({ status: 400, message: 'Email must not be blank' })
@@ -100,7 +100,6 @@ router.delete('/', (req, res) => {
 
 router.delete('/:user', (req, res, next)=>{
   let email = req.body.email
-  console.log("back-end",email)
   knex('users')
     .select('id','email')
     .where('email', email)

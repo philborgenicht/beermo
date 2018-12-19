@@ -10,6 +10,7 @@ let favorsRouter= require('./routes/favors')
 let favoritesRouter= require('./routes/favorites')
 let signupRouter = require('./routes/signup')
 let tokenRouter = require('./routes/token')
+let updateRouter = require('./routes/update')
 
 let app = express()
 
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.use('/update', updateRouter)
 app.use('/token', tokenRouter)
 app.use('/signup', signupRouter)
 app.use('/users', usersRouter)
