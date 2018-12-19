@@ -313,13 +313,13 @@ let elevenlisting=document.getElementsByClassName('11')
 
 
   form.addEventListener('submit', function(event){
+    event.preventDefault()
     let newFavor={}
     newFavor.favor_name=event.target.favorDesc.value
     newFavor.favor_size=event.target.favorVal.value
-    if(newFavor.favor_size>3){
-      alert("too generous, young padawan")
-    }
+
     postNewFavor(newFavor)
+
   })
 
   // form.addEventListener('submit', function(event){
