@@ -19,8 +19,11 @@ router.get('/:id', function(req, res, next){
 })
 
 router.post('/', function(req, res, next){
+  let id = req.params.id
+  let body = req.body
+  body['lister'] = id
   knex('favors')
-  .insert(req.body)
+  .insert(body)
   .returning('*')
   .then(data=>{
     res.send(data)

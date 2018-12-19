@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
   let loginForm = document.getElementById("login-form")
+   // M.init();
 
 
   loginForm.addEventListener('submit', event=>{
@@ -27,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function(){
           return window.open('./user.html','_self')
 
         }
+
+        })
+        .catch(err=>{
+          M.toast({html:"incorrect password"})
 
       })
 
