@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function(){
       //   tableBody.appendChild(newRow)
       //   newRow.appendChild(newData)
       // }
-      for (var i=0; i<results.data.length; i ++){
+      for (let i=0; i<results.data.length; i ++){
         // let newlisting=document.createElement('li')
         // newlisting.innerText=`Favor Listing: ${results.data[i].id},
         //    Favor Description: ${results.data[i].favor_name},
@@ -65,12 +65,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 for(let j=0; j<firstlisting.length; j++){
                   firstlisting[j].style.visibility="hidden"
-                  let favorInfo=firstlisting[j]
-                  let obj={}
-                  console.log(favorInfo)
-                  for (let k=0; k<favorInfo.length; k++){
 
-                  }
                 }
               })
             }
@@ -204,10 +199,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
   form.addEventListener('submit', function(event){
-    event.preventDefault()
     let newFavor={}
     newFavor.favor_name=event.target.favorDesc.value
     newFavor.favor_size=event.target.favorVal.value
+    
 
     postNewFavor(newFavor)
 
@@ -223,14 +218,5 @@ document.addEventListener("DOMContentLoaded", function(){
   //
   //   postNewTransaction(newTrans)
   // })
-
-  if(firstlisting.innerText==="completed"||secondlisting.innerText==="completed"||thirdlisting.innerText==="completed"||fourthlisting.innerText==="completed"||fifthlisting.innerText==="completed"||sixthlisting.innerText==="completed"||seventhlisting.innerText==="completed"||eighthlisting.innerText==="completed"||ninthlisting.innerText==="completed"||tenthlisting.innerText==="completed"||eleventhlisting.innerText==="completed"){
-
-  }
-
-
-
-
-
 
 })

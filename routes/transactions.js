@@ -25,12 +25,23 @@ router.get('/:id', (req, res, next)=> {
         })
     })
 
+router.post('/', (req,res,next)=>{
+  let body = req.body
+  console.log("body", req.body)
+  knex('transactions')
+    .insert(body)
+    .returning(['*'])
+    .then(data=>{
+      res.send(data)
+    })
+    .catch(err=>{
+      console.error(err)
+    })
+})
+
+
 });
 
-router.get('/:id', (req, res, next)=> {
-  console.log('hello there mik');
-  let id=req.params.id
 
-});
 
 module.exports = router;
