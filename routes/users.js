@@ -2,6 +2,8 @@ let express = require('express');
 let router = express.Router();
 let knex = require('../knex')
 let cors = require('cors')
+let bcrypt = require('bcryptjs')
+let salt = bcrypt.genSaltSync(10)
 // router.use(cors())
 
 /* GET users listing. */
@@ -33,10 +35,16 @@ router.post('/', (req,res,next)=>{
   })
 })
 
-router.patch('/:id', (req, res, next)=>{
+router.patch('/:user', (req, res, next)=>{
+  console.log(req.body.hashed_password)
+  let passWord = req.body.hashed_password
+  let hash = bcrypt.hashSync(passWord, 8);
+  let body = req.body
+  body[ 'hashed_password' ] = hash;
+
   knex('users')
-  .update(req.body)
-  .where('id', req.params.id)
+  .update(body)
+  .where('id', req.params.user)
   .returning('*')
   .then(data=>{
     res.send(data)
@@ -44,7 +52,6 @@ router.patch('/:id', (req, res, next)=>{
 })
 
 router.patch('/delete/:email', (req, res, next)=>{
-  console.log("body",req.body,"params", req.params)
   knex('users')
   .where('email', req.params.email)
   .update({is_active:false})
