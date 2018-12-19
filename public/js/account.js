@@ -27,7 +27,6 @@ const appendage2=document.getElementById('acctinfo2')
         li.innerText =
         `
         Transaction# ${i+1}:
-
         Them: ${data1[i].sender_first_name} ${data1[i].sender_last_name}
         Beer Earned: ${data1[i].beer_id}
         Favor Performed: ${data1[i].favor}
@@ -42,14 +41,12 @@ const appendage2=document.getElementById('acctinfo2')
         let li2 = document.createElement('li')
 
         li2.innerText =
-        `Them: ${data2[i].first_name} ${data2[i].last_name}
-
-        Beer Earned: ${data2[i].beer_id}
-
-        Favor Performed: ${data2[i].favor}
-
-        Transaction Date: ${data2[i].created_at.substring(0,10)}
-
+        `
+        Transaction# ${i+1}:
+         Them: ${data2[i].first_name} ${data2[i].last_name}
+         Beer Earned: ${data2[i].beer_id}
+         Favor Performed: ${data2[i].favor}
+         Transaction Date: ${data2[i].created_at.substring(0,10)}
         `
         appendage2.appendChild(li2)
 
