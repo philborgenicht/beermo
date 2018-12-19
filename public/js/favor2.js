@@ -67,10 +67,7 @@ document.addEventListener("DOMContentLoaded", function(){
                   firstlisting[j].style.visibility="hidden"
                   let favorInfo=firstlisting[j]
                   let obj={}
-                  console.log(favorInfo)
-                  for (let k=0; k<favorInfo.length; k++){
-
-                  }
+                  
                 }
               })
             }
