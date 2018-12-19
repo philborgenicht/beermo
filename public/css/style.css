@@ -22,7 +22,7 @@
 
 #submit2{
   font-family: 'Kalam', cursive;
-  font-size: 30px;
+  font-size: 3px;
   text-shadow:
   -1px -1px 0 white,
   1px -1px 0 white,
@@ -31,11 +31,11 @@
 }
 
 #acctinfo{
-  padding-right: 2vw;
+  padding-right:2vw;
 }
 
 #acctinfo2{
-  padding-left: 2vw;
+  padding-left:2vw;
 }
 
 .loginform{
